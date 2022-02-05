@@ -6,7 +6,6 @@ afterEach(cleanup);
 
 test('<Counter />', () => {
   const { debug, getByTestId } = render(<Counter />);
-  debug(); // outputs dom as a string
   const counterButton = getByTestId('counter-button');
 
   // asserts counter-button is a button
@@ -21,5 +20,4 @@ test('<Counter />', () => {
   fireEvent.click(counterButton);
   expect(counterButton.textContent).toBe('2');
 
-  debug();
 });

@@ -5,10 +5,14 @@ export default function MovieForm({ submitForm }) {
 
   return (
     <div>
-      <form data-testid='movie-form' onSubmit={() => submitForm(text)}>
-        <input type='text' onChange={(e) => setText(e)}/>
+      <form data-testid='movie-form' onSubmit={() => submitForm({text})}>
+        <label htmlFor='text'>
+          Text
+          <input id='text' type='text' onChange={(e) => setText(e.target.value)}/>
+        </label>
         <button>Submit</button>
       </form>
     </div>
   );
 }
+
