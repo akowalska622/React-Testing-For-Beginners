@@ -5,7 +5,7 @@ export default function Counter() {
   const [count, setCount] = useState(0);
   return (
     <div className='hello'>
-      <button>{count}</button>
+      <button data-testid='counter-button'>{count}</button>
     </div>
   );
 }
